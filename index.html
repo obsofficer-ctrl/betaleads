@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Betaleads - AI-Powered Lead Generation & Cold Calling</title>
+    <meta name="description" content="Let AI agents find and call your leads automatically. Get hot, interested prospects delivered to you with full call analytics.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="grid-overlay"></div>
+        <div class="particles" id="particles"></div>
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+        <div class="glow-orb orb-3"></div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Header / Hero -->
+        <header class="hero">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="30" cy="30" r="28" stroke="url(#logoGradient)" stroke-width="2"/>
+                        <circle cx="30" cy="30" r="20" stroke="url(#logoGradient)" stroke-width="1.5" opacity="0.6"/>
+                        <path d="M30 10 L30 50 M10 30 L50 30" stroke="url(#logoGradient)" stroke-width="1" opacity="0.4"/>
+                        <circle cx="30" cy="30" r="8" fill="url(#logoGradient)"/>
+                        <circle cx="30" cy="30" r="4" fill="#0a0a0f"/>
+                        <defs>
+                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#00f0ff"/>
+                                <stop offset="50%" style="stop-color:#7b2fff"/>
+                                <stop offset="100%" style="stop-color:#ff00e5"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <span class="logo-text">BETALEADS</span>
+            </div>
+
+            <h1 class="hero-title">
+                <span class="title-line">AI Agents That</span>
+                <span class="title-highlight">Find & Call</span>
+                <span class="title-line">Your Leads</span>
+            </h1>
+
+            <p class="hero-subtitle">
+                Stop wasting time on cold outreach. Our AI robots analyze your business,
+                hunt for perfect leads, and make thousands of calls — delivering only
+                <strong>hot, interested prospects</strong> with full analytics.
+            </p>
+
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" data-count="300">300</span>
+                    <span class="stat-label">to</span>
+                    <span class="stat-number" data-count="3000">3000</span>
+                    <span class="stat-label">calls/campaign</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- How It Works - 3 Robots -->
+        <section class="robots-section">
+            <h2 class="section-title">Three AI Agents Working For You</h2>
+
+            <div class="robots-grid">
+                <!-- Robot 1 - Analyzer -->
+                <div class="robot-card" data-aos="fade-up">
+                    <div class="robot-glow"></div>
+                    <div class="robot-image">
+                        <svg class="robot-svg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Robot Head -->
+                            <rect x="50" y="40" width="100" height="80" rx="10" fill="url(#robotGrad1)" stroke="#00f0ff" stroke-width="2"/>
+                            <!-- Eyes -->
+                            <circle cx="75" cy="75" r="12" fill="#0a0a0f"/>
+                            <circle cx="125" cy="75" r="12" fill="#0a0a0f"/>
+                            <circle cx="75" cy="75" r="6" fill="#00f0ff" class="eye-glow"/>
+                            <circle cx="125" cy="75" r="6" fill="#00f0ff" class="eye-glow"/>
+                            <!-- Scanning beam -->
+                            <path d="M100 95 L60 150 L140 150 Z" fill="url(#scanBeam)" opacity="0.3" class="scan-beam"/>
+                            <!-- Antenna -->
+                            <line x1="100" y1="40" x2="100" y2="20" stroke="#00f0ff" stroke-width="2"/>
+                            <circle cx="100" cy="15" r="5" fill="#00f0ff" class="antenna-pulse"/>
+                            <!-- Data streams -->
+                            <path d="M160 60 Q180 80 160 100" stroke="#7b2fff" stroke-width="2" stroke-dasharray="5,5" class="data-stream"/>
+                            <path d="M40 60 Q20 80 40 100" stroke="#7b2fff" stroke-width="2" stroke-dasharray="5,5" class="data-stream"/>
+                            <!-- Document icon -->
+                            <rect x="80" y="140" width="40" height="50" rx="3" fill="#1a1a2e" stroke="#00f0ff" stroke-width="1"/>
+                            <line x1="88" y1="152" x2="112" y2="152" stroke="#00f0ff" stroke-width="2"/>
+                            <line x1="88" y1="162" x2="108" y2="162" stroke="#00f0ff" stroke-width="2"/>
+                            <line x1="88" y1="172" x2="105" y2="172" stroke="#00f0ff" stroke-width="2"/>
+                            <defs>
+                                <linearGradient id="robotGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#1a1a2e"/>
+                                    <stop offset="100%" style="stop-color:#0f0f1a"/>
+                                </linearGradient>
+                                <linearGradient id="scanBeam" x1="50%" y1="0%" x2="50%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#00f0ff"/>
+                                    <stop offset="100%" style="stop-color:transparent"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="robot-info">
+                        <span class="robot-number">01</span>
+                        <h3 class="robot-title">Analyzer Bot</h3>
+                        <p class="robot-desc">Studies your company, understands your product, and learns exactly what makes your ideal customer.</p>
+                    </div>
+                </div>
+
+                <!-- Robot 2 - Hunter -->
+                <div class="robot-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="robot-glow"></div>
+                    <div class="robot-image">
+                        <svg class="robot-svg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Robot Head with radar -->
+                            <rect x="50" y="50" width="100" height="70" rx="10" fill="url(#robotGrad2)" stroke="#7b2fff" stroke-width="2"/>
+                            <!-- Radar eye -->
+                            <circle cx="100" cy="85" r="25" fill="#0a0a0f" stroke="#7b2fff" stroke-width="1"/>
+                            <circle cx="100" cy="85" r="18" stroke="#7b2fff" stroke-width="1" opacity="0.5"/>
+                            <circle cx="100" cy="85" r="10" stroke="#7b2fff" stroke-width="1" opacity="0.3"/>
+                            <line x1="100" y1="85" x2="118" y2="75" stroke="#7b2fff" stroke-width="2" class="radar-line"/>
+                            <!-- Antenna array -->
+                            <line x1="70" y1="50" x2="60" y2="30" stroke="#7b2fff" stroke-width="2"/>
+                            <line x1="100" y1="50" x2="100" y2="25" stroke="#7b2fff" stroke-width="2"/>
+                            <line x1="130" y1="50" x2="140" y2="30" stroke="#7b2fff" stroke-width="2"/>
+                            <circle cx="60" cy="28" r="4" fill="#7b2fff" class="antenna-pulse"/>
+                            <circle cx="100" cy="23" r="4" fill="#7b2fff" class="antenna-pulse"/>
+                            <circle cx="140" cy="28" r="4" fill="#7b2fff" class="antenna-pulse"/>
+                            <!-- Search waves -->
+                            <path d="M30 85 Q20 85 20 95" stroke="#7b2fff" stroke-width="2" opacity="0.6" class="wave"/>
+                            <path d="M25 85 Q10 85 10 100" stroke="#7b2fff" stroke-width="2" opacity="0.4" class="wave"/>
+                            <path d="M170 85 Q180 85 180 95" stroke="#7b2fff" stroke-width="2" opacity="0.6" class="wave"/>
+                            <path d="M175 85 Q190 85 190 100" stroke="#7b2fff" stroke-width="2" opacity="0.4" class="wave"/>
+                            <!-- Found leads -->
+                            <circle cx="45" cy="150" r="15" fill="#1a1a2e" stroke="#7b2fff" stroke-width="2" class="lead-found"/>
+                            <circle cx="100" cy="160" r="15" fill="#1a1a2e" stroke="#7b2fff" stroke-width="2" class="lead-found"/>
+                            <circle cx="155" cy="150" r="15" fill="#1a1a2e" stroke="#7b2fff" stroke-width="2" class="lead-found"/>
+                            <text x="45" y="154" text-anchor="middle" fill="#7b2fff" font-size="12" font-weight="bold">L</text>
+                            <text x="100" y="164" text-anchor="middle" fill="#7b2fff" font-size="12" font-weight="bold">L</text>
+                            <text x="155" y="154" text-anchor="middle" fill="#7b2fff" font-size="12" font-weight="bold">L</text>
+                            <defs>
+                                <linearGradient id="robotGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#1a1a2e"/>
+                                    <stop offset="100%" style="stop-color:#0f0f1a"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="robot-info">
+                        <span class="robot-number">02</span>
+                        <h3 class="robot-title">Hunter Bot</h3>
+                        <p class="robot-desc">Scours the internet to find leads matching your criteria — industry, location, company size. Thousands of prospects discovered.</p>
+                    </div>
+                </div>
+
+                <!-- Robot 3 - Caller -->
+                <div class="robot-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="robot-glow"></div>
+                    <div class="robot-image">
+                        <svg class="robot-svg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Robot Head -->
+                            <rect x="50" y="40" width="100" height="80" rx="10" fill="url(#robotGrad3)" stroke="#ff00e5" stroke-width="2"/>
+                            <!-- Eyes -->
+                            <circle cx="75" cy="70" r="10" fill="#0a0a0f"/>
+                            <circle cx="125" cy="70" r="10" fill="#0a0a0f"/>
+                            <circle cx="75" cy="70" r="5" fill="#ff00e5" class="eye-glow"/>
+                            <circle cx="125" cy="70" r="5" fill="#ff00e5" class="eye-glow"/>
+                            <!-- Mouth speaker -->
+                            <rect x="80" y="90" width="40" height="15" rx="3" fill="#0a0a0f"/>
+                            <line x1="85" y1="97" x2="90" y2="97" stroke="#ff00e5" stroke-width="2"/>
+                            <line x1="95" y1="97" x2="105" y2="97" stroke="#ff00e5" stroke-width="3"/>
+                            <line x1="110" y1="97" x2="115" y2="97" stroke="#ff00e5" stroke-width="2"/>
+                            <!-- Sound waves -->
+                            <path d="M155 75 Q165 75 165 85 Q165 95 155 95" stroke="#ff00e5" stroke-width="2" fill="none" class="sound-wave"/>
+                            <path d="M160 70 Q175 70 175 85 Q175 100 160 100" stroke="#ff00e5" stroke-width="2" fill="none" opacity="0.6" class="sound-wave"/>
+                            <path d="M165 65 Q185 65 185 85 Q185 105 165 105" stroke="#ff00e5" stroke-width="2" fill="none" opacity="0.3" class="sound-wave"/>
+                            <!-- Phone icon -->
+                            <path d="M45 140 Q35 145 35 155 Q35 165 45 170 L55 175 Q60 165 55 155 L45 140" fill="#ff00e5" class="phone-icon"/>
+                            <!-- Checklist -->
+                            <rect x="130" y="135" width="50" height="60" rx="5" fill="#1a1a2e" stroke="#ff00e5" stroke-width="1"/>
+                            <circle cx="140" cy="150" r="4" fill="#00ff88"/>
+                            <line x1="148" y1="150" x2="170" y2="150" stroke="#fff" stroke-width="2"/>
+                            <circle cx="140" cy="165" r="4" fill="#00ff88"/>
+                            <line x1="148" y1="165" x2="168" y2="165" stroke="#fff" stroke-width="2"/>
+                            <circle cx="140" cy="180" r="4" fill="#00ff88"/>
+                            <line x1="148" y1="180" x2="165" y2="180" stroke="#fff" stroke-width="2"/>
+                            <!-- Antenna -->
+                            <line x1="100" y1="40" x2="100" y2="25" stroke="#ff00e5" stroke-width="2"/>
+                            <circle cx="100" cy="22" r="5" fill="#ff00e5" class="antenna-pulse"/>
+                            <defs>
+                                <linearGradient id="robotGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#1a1a2e"/>
+                                    <stop offset="100%" style="stop-color:#0f0f1a"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="robot-info">
+                        <span class="robot-number">03</span>
+                        <h3 class="robot-title">Caller Bot</h3>
+                        <p class="robot-desc">Makes intelligent calls to every lead, qualifies interest, and delivers a detailed report with hot prospects ready to buy.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits -->
+        <section class="benefits-section">
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <svg viewBox="0 0 50 50" fill="none"><path d="M25 5 L45 15 L45 35 L25 45 L5 35 L5 15 Z" stroke="url(#benefitGrad)" stroke-width="2" fill="none"/><text x="25" y="30" text-anchor="middle" fill="#00f0ff" font-size="16" font-weight="bold">$</text><defs><linearGradient id="benefitGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#00f0ff"/><stop offset="100%" style="stop-color:#7b2fff"/></linearGradient></defs></svg>
+                </div>
+                <h3>Save 90% on Outreach</h3>
+                <p>No more hiring SDR teams or paying per lead. AI works 24/7 at a fraction of the cost.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <svg viewBox="0 0 50 50" fill="none"><circle cx="25" cy="25" r="20" stroke="url(#benefitGrad2)" stroke-width="2" fill="none"/><path d="M25 10 L25 25 L35 30" stroke="#7b2fff" stroke-width="3" stroke-linecap="round"/><defs><linearGradient id="benefitGrad2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#7b2fff"/><stop offset="100%" style="stop-color:#ff00e5"/></linearGradient></defs></svg>
+                </div>
+                <h3>Hours, Not Weeks</h3>
+                <p>Get thousands of qualified calls completed while you focus on closing deals.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <svg viewBox="0 0 50 50" fill="none"><rect x="8" y="15" width="34" height="25" rx="3" stroke="url(#benefitGrad3)" stroke-width="2" fill="none"/><path d="M15 25 L22 32 L35 19" stroke="#00ff88" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="benefitGrad3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ff00e5"/><stop offset="100%" style="stop-color:#00f0ff"/></linearGradient></defs></svg>
+                </div>
+                <h3>Full Analytics</h3>
+                <p>Detailed call reports, interest scores, and a checklist of your hottest leads.</p>
+            </div>
+        </section>
+
+        <!-- CTA Form Section -->
+        <section class="form-section" id="get-started">
+            <div class="form-container">
+                <div class="form-header">
+                    <h2>Launch Your AI Lead Campaign</h2>
+                    <p>Fill in the details and our bots will start working for you</p>
+                </div>
+
+                <form id="leadForm" class="lead-form">
+                    <div class="form-group">
+                        <label for="website">Your Company Website</label>
+                        <input type="url" id="website" name="website" placeholder="https://yourcompany.com" required>
+                        <span class="input-hint">We'll analyze your business to understand your product</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="industry">Target Industry / Niche</label>
+                        <input type="text" id="industry" name="industry" placeholder="e.g., SaaS, Real Estate, E-commerce..." required>
+                        <span class="input-hint">What type of clients are you looking for?</span>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="country">Country</label>
+                            <input type="text" id="country" name="country" placeholder="e.g., USA, Germany..." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="region">Region / City</label>
+                            <input type="text" id="region" name="region" placeholder="e.g., California, Berlin...">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="calls">Number of Calls</label>
+                        <div class="range-container">
+                            <input type="range" id="calls" name="calls" min="300" max="3000" step="100" value="1000">
+                            <div class="range-labels">
+                                <span>300</span>
+                                <span class="range-value" id="callsValue">1000</span>
+                                <span>3000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <span class="btn-text">Start My Campaign</span>
+                        <span class="btn-icon">
+                            <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </span>
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <h2>Have Questions?</h2>
+            <p>Get in touch directly — we're here to help</p>
+            <div class="contact-buttons">
+                <a href="https://wa.me/971504065386" target="_blank" class="contact-btn whatsapp">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    <span>WhatsApp</span>
+                </a>
+                <a href="mailto:obsofficer@gmail.com" class="contact-btn email">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>
+                    <span>Email Us</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-logo">BETALEADS</div>
+            <p>AI-Powered Lead Generation & Qualification</p>
+            <div class="footer-line"></div>
+            <p class="copyright">&copy; 2025 Betaleads. All rights reserved.</p>
+        </footer>
+    </main>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <svg viewBox="0 0 60 60" fill="none">
+                    <circle cx="30" cy="30" r="28" stroke="#00ff88" stroke-width="2"/>
+                    <path d="M18 30 L26 38 L42 22" stroke="#00ff88" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <h3>Request Sent!</h3>
+            <p>We'll analyze your requirements and get back to you within 24 hours.</p>
+            <button class="modal-close" onclick="closeModal()">Got it</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
