@@ -73,88 +73,37 @@
             <h2 class="section-title">Three AI Agents Working For You</h2>
 
             <div class="robots-grid">
-                <!-- Robot 1 - Analyzer (Humanoid) -->
+                <!-- Robot 1 - Analyzer -->
                 <div class="robot-card" data-aos="fade-up">
                     <div class="robot-glow"></div>
                     <div class="robot-image">
-                        <svg class="robot-svg" viewBox="0 0 200 220" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Glow effect behind robot -->
-                            <ellipse cx="100" cy="200" rx="50" ry="10" fill="url(#glowGrad1)" opacity="0.5"/>
-
-                            <!-- Body/Torso -->
-                            <path d="M70 95 L65 140 L75 145 L100 150 L125 145 L135 140 L130 95 Z" fill="url(#bodyGrad1)" stroke="#00f0ff" stroke-width="1.5"/>
-                            <!-- Chest core -->
-                            <circle cx="100" cy="115" r="12" fill="#0a0a0f" stroke="#00f0ff" stroke-width="1"/>
-                            <circle cx="100" cy="115" r="6" fill="#00f0ff" class="core-pulse"/>
-                            <!-- Chest lines -->
-                            <path d="M80 100 L85 130" stroke="#00f0ff" stroke-width="1" opacity="0.5"/>
-                            <path d="M120 100 L115 130" stroke="#00f0ff" stroke-width="1" opacity="0.5"/>
-
-                            <!-- Head -->
-                            <path d="M75 45 L75 85 Q75 95 85 95 L115 95 Q125 95 125 85 L125 45 Q125 30 100 30 Q75 30 75 45 Z" fill="url(#headGrad1)" stroke="#00f0ff" stroke-width="2"/>
-                            <!-- Face plate -->
-                            <rect x="82" y="50" width="36" height="35" rx="5" fill="#0a0a0f" opacity="0.8"/>
+                        <svg class="robot-svg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Robot Head -->
+                            <rect x="50" y="40" width="100" height="80" rx="10" fill="url(#robotGrad1)" stroke="#00f0ff" stroke-width="2"/>
                             <!-- Eyes -->
-                            <rect x="85" y="55" width="12" height="8" rx="2" fill="#00f0ff" class="eye-glow"/>
-                            <rect x="103" y="55" width="12" height="8" rx="2" fill="#00f0ff" class="eye-glow"/>
-                            <!-- Mouth/Speaker -->
-                            <rect x="90" y="72" width="20" height="6" rx="2" fill="#0a0a0f" stroke="#00f0ff" stroke-width="1"/>
-                            <line x1="93" y1="75" x2="97" y2="75" stroke="#00f0ff" stroke-width="1"/>
-                            <line x1="100" y1="75" x2="107" y2="75" stroke="#00f0ff" stroke-width="1"/>
-
+                            <circle cx="75" cy="75" r="12" fill="#0a0a0f"/>
+                            <circle cx="125" cy="75" r="12" fill="#0a0a0f"/>
+                            <circle cx="75" cy="75" r="6" fill="#00f0ff" class="eye-glow"/>
+                            <circle cx="125" cy="75" r="6" fill="#00f0ff" class="eye-glow"/>
+                            <!-- Scanning beam -->
+                            <path d="M100 95 L60 150 L140 150 Z" fill="url(#scanBeam)" opacity="0.3" class="scan-beam"/>
                             <!-- Antenna -->
-                            <line x1="100" y1="30" x2="100" y2="15" stroke="#00f0ff" stroke-width="2"/>
-                            <circle cx="100" cy="12" r="4" fill="#00f0ff" class="antenna-pulse"/>
-                            <!-- Side head details -->
-                            <rect x="70" y="55" width="5" height="20" rx="2" fill="#1a1a2e" stroke="#00f0ff" stroke-width="1"/>
-                            <rect x="125" y="55" width="5" height="20" rx="2" fill="#1a1a2e" stroke="#00f0ff" stroke-width="1"/>
-
-                            <!-- Arms -->
-                            <!-- Left arm -->
-                            <path d="M65 98 L50 110 L45 135 L50 140 L55 138 L58 115 L68 105" fill="url(#armGrad1)" stroke="#00f0ff" stroke-width="1.5"/>
-                            <!-- Left hand holding tablet -->
-                            <rect x="30" y="130" width="25" height="35" rx="3" fill="#1a1a2e" stroke="#00f0ff" stroke-width="1.5"/>
-                            <rect x="34" y="134" width="17" height="24" fill="#0a0a0f"/>
-                            <!-- Screen content - analyzing -->
-                            <line x1="36" y1="140" x2="48" y2="140" stroke="#00f0ff" stroke-width="1" class="scan-line"/>
-                            <line x1="36" y1="145" x2="45" y2="145" stroke="#00f0ff" stroke-width="1" opacity="0.7"/>
-                            <line x1="36" y1="150" x2="48" y2="150" stroke="#00f0ff" stroke-width="1" opacity="0.5"/>
-
-                            <!-- Right arm -->
-                            <path d="M135 98 L150 110 L155 135 L150 140 L145 138 L142 115 L132 105" fill="url(#armGrad1)" stroke="#00f0ff" stroke-width="1.5"/>
-                            <!-- Right hand with hologram -->
-                            <circle cx="158" cy="125" r="15" fill="none" stroke="#00f0ff" stroke-width="1" opacity="0.3" class="hologram-ring"/>
-                            <circle cx="158" cy="125" r="10" fill="none" stroke="#00f0ff" stroke-width="1" opacity="0.5" class="hologram-ring"/>
-                            <circle cx="158" cy="125" r="5" fill="#00f0ff" opacity="0.5"/>
-
-                            <!-- Scanning beam from eyes -->
-                            <path d="M100 63 L70 140 L130 140 Z" fill="url(#scanBeam1)" opacity="0.15" class="scan-beam"/>
-
-                            <!-- Legs hint -->
-                            <path d="M85 150 L82 175 L88 175 L92 155" fill="url(#bodyGrad1)" stroke="#00f0ff" stroke-width="1"/>
-                            <path d="M115 150 L118 175 L112 175 L108 155" fill="url(#bodyGrad1)" stroke="#00f0ff" stroke-width="1"/>
-
+                            <line x1="100" y1="40" x2="100" y2="20" stroke="#00f0ff" stroke-width="2"/>
+                            <circle cx="100" cy="15" r="5" fill="#00f0ff" class="antenna-pulse"/>
+                            <!-- Document icon -->
+                            <rect x="80" y="140" width="40" height="50" rx="3" fill="#1a1a2e" stroke="#00f0ff" stroke-width="1"/>
+                            <line x1="88" y1="152" x2="112" y2="152" stroke="#00f0ff" stroke-width="2"/>
+                            <line x1="88" y1="162" x2="108" y2="162" stroke="#00f0ff" stroke-width="2"/>
+                            <line x1="88" y1="172" x2="105" y2="172" stroke="#00f0ff" stroke-width="2"/>
                             <defs>
-                                <linearGradient id="headGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#1e3a4f"/>
-                                    <stop offset="100%" style="stop-color:#0f1a24"/>
+                                <linearGradient id="robotGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#1a1a2e"/>
+                                    <stop offset="100%" style="stop-color:#0f0f1a"/>
                                 </linearGradient>
-                                <linearGradient id="bodyGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#1a2a3a"/>
-                                    <stop offset="100%" style="stop-color:#0a1520"/>
-                                </linearGradient>
-                                <linearGradient id="armGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#15252f"/>
-                                    <stop offset="100%" style="stop-color:#0a1218"/>
-                                </linearGradient>
-                                <linearGradient id="scanBeam1" x1="50%" y1="0%" x2="50%" y2="100%">
+                                <linearGradient id="scanBeam" x1="50%" y1="0%" x2="50%" y2="100%">
                                     <stop offset="0%" style="stop-color:#00f0ff"/>
                                     <stop offset="100%" style="stop-color:transparent"/>
                                 </linearGradient>
-                                <radialGradient id="glowGrad1" cx="50%" cy="50%" r="50%">
-                                    <stop offset="0%" style="stop-color:#00f0ff"/>
-                                    <stop offset="100%" style="stop-color:transparent"/>
-                                </radialGradient>
                             </defs>
                         </svg>
                     </div>
@@ -165,83 +114,37 @@
                     </div>
                 </div>
 
-                <!-- Robot 2 - Hunter (Humanoid) -->
+                <!-- Robot 2 - Hunter -->
                 <div class="robot-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="robot-glow"></div>
                     <div class="robot-image">
-                        <svg class="robot-svg" viewBox="0 0 200 220" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Glow effect -->
-                            <ellipse cx="100" cy="200" rx="50" ry="10" fill="url(#glowGrad2)" opacity="0.5"/>
-
-                            <!-- Body/Torso - more armored look -->
-                            <path d="M68 95 L60 145 L80 155 L100 158 L120 155 L140 145 L132 95 Z" fill="url(#bodyGrad2)" stroke="#7b2fff" stroke-width="1.5"/>
-                            <!-- Chest reactor -->
-                            <polygon points="100,105 88,118 88,132 100,140 112,132 112,118" fill="#0a0a0f" stroke="#7b2fff" stroke-width="1"/>
-                            <polygon points="100,110 93,118 93,128 100,133 107,128 107,118" fill="#7b2fff" opacity="0.6" class="core-pulse"/>
-                            <!-- Armor lines -->
-                            <path d="M75 100 L70 140" stroke="#7b2fff" stroke-width="1" opacity="0.4"/>
-                            <path d="M125 100 L130 140" stroke="#7b2fff" stroke-width="1" opacity="0.4"/>
-
-                            <!-- Head - visor style -->
-                            <path d="M72 42 L72 82 Q72 92 85 92 L115 92 Q128 92 128 82 L128 42 Q128 25 100 25 Q72 25 72 42 Z" fill="url(#headGrad2)" stroke="#7b2fff" stroke-width="2"/>
-                            <!-- Visor -->
-                            <path d="M78 50 L78 75 Q78 82 88 82 L112 82 Q122 82 122 75 L122 50 Q122 45 100 45 Q78 45 78 50 Z" fill="#0a0a0f" stroke="#7b2fff" stroke-width="1"/>
+                        <svg class="robot-svg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Robot Head with radar -->
+                            <rect x="50" y="50" width="100" height="70" rx="10" fill="url(#robotGrad2)" stroke="#7b2fff" stroke-width="2"/>
                             <!-- Radar eye -->
-                            <circle cx="100" cy="65" r="15" fill="#0a0a0f" stroke="#7b2fff" stroke-width="1"/>
-                            <circle cx="100" cy="65" r="10" stroke="#7b2fff" stroke-width="1" opacity="0.5"/>
-                            <circle cx="100" cy="65" r="5" stroke="#7b2fff" stroke-width="1" opacity="0.3"/>
-                            <line x1="100" y1="65" x2="112" y2="58" stroke="#7b2fff" stroke-width="2" class="radar-line"/>
-                            <circle cx="100" cy="65" r="2" fill="#7b2fff"/>
-
-                            <!-- Multiple antennas -->
-                            <line x1="85" y1="25" x2="78" y2="10" stroke="#7b2fff" stroke-width="2"/>
-                            <line x1="100" y1="25" x2="100" y2="8" stroke="#7b2fff" stroke-width="2"/>
-                            <line x1="115" y1="25" x2="122" y2="10" stroke="#7b2fff" stroke-width="2"/>
-                            <circle cx="78" cy="8" r="3" fill="#7b2fff" class="antenna-pulse"/>
-                            <circle cx="100" cy="6" r="3" fill="#7b2fff" class="antenna-pulse"/>
-                            <circle cx="122" cy="8" r="3" fill="#7b2fff" class="antenna-pulse"/>
-
-                            <!-- Left arm - reaching out -->
-                            <path d="M62 98 L42 115 L25 130 L28 138 L35 135 L48 122 L62 108" fill="url(#armGrad2)" stroke="#7b2fff" stroke-width="1.5"/>
-                            <!-- Left hand with search waves -->
-                            <circle cx="25" cy="130" r="8" fill="#1a1a2e" stroke="#7b2fff" stroke-width="1.5"/>
-                            <path d="M15 120 Q5 130 15 140" stroke="#7b2fff" stroke-width="2" fill="none" class="wave" opacity="0.8"/>
-                            <path d="M10 115 Q-5 130 10 145" stroke="#7b2fff" stroke-width="2" fill="none" class="wave" opacity="0.5"/>
-                            <path d="M5 110 Q-15 130 5 150" stroke="#7b2fff" stroke-width="2" fill="none" class="wave" opacity="0.3"/>
-
-                            <!-- Right arm -->
-                            <path d="M138 98 L158 115 L175 130 L172 138 L165 135 L152 122 L138 108" fill="url(#armGrad2)" stroke="#7b2fff" stroke-width="1.5"/>
-                            <!-- Right hand with captured leads -->
-                            <circle cx="175" cy="130" r="8" fill="#1a1a2e" stroke="#7b2fff" stroke-width="1.5"/>
-                            <!-- Floating leads -->
-                            <circle cx="180" cy="110" r="6" fill="#1a1a2e" stroke="#7b2fff" stroke-width="1" class="lead-float"/>
-                            <text x="180" y="113" text-anchor="middle" fill="#7b2fff" font-size="8" font-weight="bold">L</text>
-                            <circle cx="190" cy="125" r="6" fill="#1a1a2e" stroke="#7b2fff" stroke-width="1" class="lead-float" style="animation-delay: 0.3s"/>
-                            <text x="190" y="128" text-anchor="middle" fill="#7b2fff" font-size="8" font-weight="bold">L</text>
-                            <circle cx="185" cy="145" r="6" fill="#1a1a2e" stroke="#7b2fff" stroke-width="1" class="lead-float" style="animation-delay: 0.6s"/>
-                            <text x="185" y="148" text-anchor="middle" fill="#7b2fff" font-size="8" font-weight="bold">L</text>
-
-                            <!-- Legs -->
-                            <path d="M82 155 L78 180 L85 180 L92 160" fill="url(#bodyGrad2)" stroke="#7b2fff" stroke-width="1"/>
-                            <path d="M118 155 L122 180 L115 180 L108 160" fill="url(#bodyGrad2)" stroke="#7b2fff" stroke-width="1"/>
-
+                            <circle cx="100" cy="85" r="25" fill="#0a0a0f" stroke="#7b2fff" stroke-width="1"/>
+                            <circle cx="100" cy="85" r="18" stroke="#7b2fff" stroke-width="1" opacity="0.5"/>
+                            <circle cx="100" cy="85" r="10" stroke="#7b2fff" stroke-width="1" opacity="0.3"/>
+                            <line x1="100" y1="85" x2="118" y2="75" stroke="#7b2fff" stroke-width="2" class="radar-line"/>
+                            <!-- Antenna array -->
+                            <line x1="70" y1="50" x2="60" y2="30" stroke="#7b2fff" stroke-width="2"/>
+                            <line x1="100" y1="50" x2="100" y2="25" stroke="#7b2fff" stroke-width="2"/>
+                            <line x1="130" y1="50" x2="140" y2="30" stroke="#7b2fff" stroke-width="2"/>
+                            <circle cx="60" cy="28" r="4" fill="#7b2fff" class="antenna-pulse"/>
+                            <circle cx="100" cy="23" r="4" fill="#7b2fff" class="antenna-pulse"/>
+                            <circle cx="140" cy="28" r="4" fill="#7b2fff" class="antenna-pulse"/>
+                            <!-- Found leads -->
+                            <circle cx="45" cy="150" r="15" fill="#1a1a2e" stroke="#7b2fff" stroke-width="2"/>
+                            <circle cx="100" cy="160" r="15" fill="#1a1a2e" stroke="#7b2fff" stroke-width="2"/>
+                            <circle cx="155" cy="150" r="15" fill="#1a1a2e" stroke="#7b2fff" stroke-width="2"/>
+                            <text x="45" y="154" text-anchor="middle" fill="#7b2fff" font-size="12" font-weight="bold">L</text>
+                            <text x="100" y="164" text-anchor="middle" fill="#7b2fff" font-size="12" font-weight="bold">L</text>
+                            <text x="155" y="154" text-anchor="middle" fill="#7b2fff" font-size="12" font-weight="bold">L</text>
                             <defs>
-                                <linearGradient id="headGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#2a1f4f"/>
-                                    <stop offset="100%" style="stop-color:#150f2a"/>
+                                <linearGradient id="robotGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#1a1a2e"/>
+                                    <stop offset="100%" style="stop-color:#0f0f1a"/>
                                 </linearGradient>
-                                <linearGradient id="bodyGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#251a45"/>
-                                    <stop offset="100%" style="stop-color:#100a20"/>
-                                </linearGradient>
-                                <linearGradient id="armGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#1f1538"/>
-                                    <stop offset="100%" style="stop-color:#0d0818"/>
-                                </linearGradient>
-                                <radialGradient id="glowGrad2" cx="50%" cy="50%" r="50%">
-                                    <stop offset="0%" style="stop-color:#7b2fff"/>
-                                    <stop offset="100%" style="stop-color:transparent"/>
-                                </radialGradient>
                             </defs>
                         </svg>
                     </div>
@@ -252,89 +155,43 @@
                     </div>
                 </div>
 
-                <!-- Robot 3 - Caller (Humanoid) -->
+                <!-- Robot 3 - Caller -->
                 <div class="robot-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="robot-glow"></div>
                     <div class="robot-image">
-                        <svg class="robot-svg" viewBox="0 0 200 220" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Glow effect -->
-                            <ellipse cx="100" cy="200" rx="50" ry="10" fill="url(#glowGrad3)" opacity="0.5"/>
-
-                            <!-- Body/Torso - sleek design -->
-                            <path d="M70 95 L62 145 L78 152 L100 155 L122 152 L138 145 L130 95 Z" fill="url(#bodyGrad3)" stroke="#ff00e5" stroke-width="1.5"/>
-                            <!-- Chest speaker grills -->
-                            <ellipse cx="100" cy="115" rx="18" ry="12" fill="#0a0a0f" stroke="#ff00e5" stroke-width="1"/>
-                            <line x1="85" y1="112" x2="85" y2="118" stroke="#ff00e5" stroke-width="2"/>
-                            <line x1="92" y1="110" x2="92" y2="120" stroke="#ff00e5" stroke-width="2"/>
-                            <line x1="100" y1="108" x2="100" y2="122" stroke="#ff00e5" stroke-width="3" class="sound-bar"/>
-                            <line x1="108" y1="110" x2="108" y2="120" stroke="#ff00e5" stroke-width="2"/>
-                            <line x1="115" y1="112" x2="115" y2="118" stroke="#ff00e5" stroke-width="2"/>
-
-                            <!-- Head - friendly communicator -->
-                            <path d="M73 45 L73 82 Q73 92 87 92 L113 92 Q127 92 127 82 L127 45 Q127 28 100 28 Q73 28 73 45 Z" fill="url(#headGrad3)" stroke="#ff00e5" stroke-width="2"/>
-                            <!-- Face -->
-                            <ellipse cx="100" cy="65" rx="22" ry="20" fill="#0a0a0f" opacity="0.7"/>
-                            <!-- Eyes - friendly -->
-                            <ellipse cx="90" cy="58" rx="6" ry="5" fill="#ff00e5" class="eye-glow"/>
-                            <ellipse cx="110" cy="58" rx="6" ry="5" fill="#ff00e5" class="eye-glow"/>
-                            <!-- Smile/speaker mouth -->
-                            <path d="M88 72 Q100 82 112 72" stroke="#ff00e5" stroke-width="2" fill="none"/>
-
-                            <!-- Headset -->
-                            <path d="M73 55 Q65 55 65 65 Q65 75 73 75" stroke="#ff00e5" stroke-width="3" fill="none"/>
-                            <circle cx="63" cy="65" r="6" fill="#1a1a2e" stroke="#ff00e5" stroke-width="2"/>
-                            <!-- Mic -->
-                            <line x1="63" y1="71" x2="63" y2="82" stroke="#ff00e5" stroke-width="2"/>
-                            <ellipse cx="63" cy="85" rx="5" ry="3" fill="#1a1a2e" stroke="#ff00e5" stroke-width="1"/>
-
+                        <svg class="robot-svg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Robot Head -->
+                            <rect x="50" y="40" width="100" height="80" rx="10" fill="url(#robotGrad3)" stroke="#ff00e5" stroke-width="2"/>
+                            <!-- Eyes -->
+                            <circle cx="75" cy="70" r="10" fill="#0a0a0f"/>
+                            <circle cx="125" cy="70" r="10" fill="#0a0a0f"/>
+                            <circle cx="75" cy="70" r="5" fill="#ff00e5" class="eye-glow"/>
+                            <circle cx="125" cy="70" r="5" fill="#ff00e5" class="eye-glow"/>
+                            <!-- Mouth speaker -->
+                            <rect x="80" y="90" width="40" height="15" rx="3" fill="#0a0a0f"/>
+                            <line x1="85" y1="97" x2="90" y2="97" stroke="#ff00e5" stroke-width="2"/>
+                            <line x1="95" y1="97" x2="105" y2="97" stroke="#ff00e5" stroke-width="3"/>
+                            <line x1="110" y1="97" x2="115" y2="97" stroke="#ff00e5" stroke-width="2"/>
+                            <!-- Sound waves -->
+                            <path d="M155 75 Q165 75 165 85 Q165 95 155 95" stroke="#ff00e5" stroke-width="2" fill="none" class="sound-wave"/>
+                            <path d="M160 70 Q175 70 175 85 Q175 100 160 100" stroke="#ff00e5" stroke-width="2" fill="none" opacity="0.6" class="sound-wave"/>
+                            <path d="M165 65 Q185 65 185 85 Q185 105 165 105" stroke="#ff00e5" stroke-width="2" fill="none" opacity="0.3" class="sound-wave"/>
                             <!-- Antenna -->
-                            <line x1="100" y1="28" x2="100" y2="12" stroke="#ff00e5" stroke-width="2"/>
-                            <circle cx="100" cy="10" r="4" fill="#ff00e5" class="antenna-pulse"/>
-
-                            <!-- Sound waves from head -->
-                            <path d="M130 55 Q140 65 130 75" stroke="#ff00e5" stroke-width="2" fill="none" class="sound-wave"/>
-                            <path d="M135 50 Q150 65 135 80" stroke="#ff00e5" stroke-width="2" fill="none" class="sound-wave" opacity="0.6"/>
-                            <path d="M140 45 Q160 65 140 85" stroke="#ff00e5" stroke-width="2" fill="none" class="sound-wave" opacity="0.3"/>
-
-                            <!-- Left arm - gesturing -->
-                            <path d="M65 98 L50 115 L40 140 L45 145 L52 142 L58 120 L68 105" fill="url(#armGrad3)" stroke="#ff00e5" stroke-width="1.5"/>
-                            <!-- Left hand open -->
-                            <circle cx="42" cy="145" r="7" fill="#1a1a2e" stroke="#ff00e5" stroke-width="1.5"/>
-
-                            <!-- Right arm - holding checklist -->
-                            <path d="M135 98 L150 108 L158 125 L155 130 L148 128 L142 112 L132 102" fill="url(#armGrad3)" stroke="#ff00e5" stroke-width="1.5"/>
-                            <!-- Clipboard/Checklist -->
-                            <rect x="150" y="125" width="35" height="50" rx="4" fill="#1a1a2e" stroke="#ff00e5" stroke-width="1.5"/>
-                            <rect x="154" y="130" width="27" height="40" fill="#0a0a0f"/>
-                            <!-- Checklist items -->
-                            <circle cx="160" cy="140" r="3" fill="#00ff88"/>
-                            <line x1="166" y1="140" x2="178" y2="140" stroke="#fff" stroke-width="2"/>
-                            <circle cx="160" cy="152" r="3" fill="#00ff88"/>
-                            <line x1="166" y1="152" x2="176" y2="152" stroke="#fff" stroke-width="2"/>
-                            <circle cx="160" cy="164" r="3" fill="#00ff88"/>
-                            <line x1="166" y1="164" x2="175" y2="164" stroke="#fff" stroke-width="2"/>
-
-                            <!-- Legs -->
-                            <path d="M83 152 L80 178 L87 178 L92 157" fill="url(#bodyGrad3)" stroke="#ff00e5" stroke-width="1"/>
-                            <path d="M117 152 L120 178 L113 178 L108 157" fill="url(#bodyGrad3)" stroke="#ff00e5" stroke-width="1"/>
-
+                            <line x1="100" y1="40" x2="100" y2="25" stroke="#ff00e5" stroke-width="2"/>
+                            <circle cx="100" cy="22" r="5" fill="#ff00e5" class="antenna-pulse"/>
+                            <!-- Checklist -->
+                            <rect x="75" y="135" width="50" height="60" rx="5" fill="#1a1a2e" stroke="#ff00e5" stroke-width="1"/>
+                            <circle cx="85" cy="150" r="4" fill="#00ff88"/>
+                            <line x1="93" y1="150" x2="115" y2="150" stroke="#fff" stroke-width="2"/>
+                            <circle cx="85" cy="165" r="4" fill="#00ff88"/>
+                            <line x1="93" y1="165" x2="113" y2="165" stroke="#fff" stroke-width="2"/>
+                            <circle cx="85" cy="180" r="4" fill="#00ff88"/>
+                            <line x1="93" y1="180" x2="110" y2="180" stroke="#fff" stroke-width="2"/>
                             <defs>
-                                <linearGradient id="headGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#3a1a3f"/>
-                                    <stop offset="100%" style="stop-color:#1a0a1f"/>
+                                <linearGradient id="robotGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#1a1a2e"/>
+                                    <stop offset="100%" style="stop-color:#0f0f1a"/>
                                 </linearGradient>
-                                <linearGradient id="bodyGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#351535"/>
-                                    <stop offset="100%" style="stop-color:#150815"/>
-                                </linearGradient>
-                                <linearGradient id="armGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#2a1028"/>
-                                    <stop offset="100%" style="stop-color:#120610"/>
-                                </linearGradient>
-                                <radialGradient id="glowGrad3" cx="50%" cy="50%" r="50%">
-                                    <stop offset="0%" style="stop-color:#ff00e5"/>
-                                    <stop offset="100%" style="stop-color:transparent"/>
-                                </radialGradient>
                             </defs>
                         </svg>
                     </div>
