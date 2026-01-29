@@ -3,182 +3,474 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Leads Dashboard</title>
+    <title>Betaleads - AI-Powered Lead Generation & Cold Calling</title>
+    <meta name="description" content="Let AI agents find and call your leads automatically. Get hot, interested prospects delivered to you with full call analytics.">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <!-- Header -->
-        <header class="header">
-            <h1>AI Leads Dashboard</h1>
-            <div class="status-badge">
-                <span id="statusDot" class="status-dot"></span>
-                <span id="statusText">Connecting...</span>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="grid-overlay"></div>
+        <div class="particles" id="particles"></div>
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+        <div class="glow-orb orb-3"></div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Header / Hero -->
+        <header class="hero">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="30" cy="30" r="28" stroke="url(#logoGradient)" stroke-width="2"/>
+                        <circle cx="30" cy="30" r="20" stroke="url(#logoGradient)" stroke-width="1.5" opacity="0.6"/>
+                        <path d="M30 10 L30 50 M10 30 L50 30" stroke="url(#logoGradient)" stroke-width="1" opacity="0.4"/>
+                        <circle cx="30" cy="30" r="8" fill="url(#logoGradient)"/>
+                        <circle cx="30" cy="30" r="4" fill="#0a0a0f"/>
+                        <defs>
+                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#00f0ff"/>
+                                <stop offset="50%" style="stop-color:#7b2fff"/>
+                                <stop offset="100%" style="stop-color:#ff00e5"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <span class="logo-text">BETALEADS</span>
+            </div>
+
+            <h1 class="hero-title">
+                <span class="title-line">AI Agents That</span>
+                <span class="title-highlight">Find & Call</span>
+                <span class="title-line">Your Leads</span>
+            </h1>
+
+            <p class="hero-subtitle">
+                Stop wasting time on cold outreach. Our AI robots analyze your business,
+                hunt for perfect leads, and make thousands of calls — delivering only
+                <strong>hot, interested prospects</strong> with full analytics.
+            </p>
+
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" data-count="300">300</span>
+                    <span class="stat-label">to</span>
+                    <span class="stat-number" data-count="3000">3000</span>
+                    <span class="stat-label">calls/campaign</span>
+                </div>
             </div>
         </header>
 
-        <!-- Campaign Setup Section -->
-        <section class="section">
-            <div class="section-header">
-                <div>
-                    <h2 class="section-title">Campaign Setup</h2>
-                    <p class="section-subtitle">Configure your lead generation campaign</p>
-                </div>
-            </div>
+        <!-- How It Works - 3 Robots -->
+        <section class="robots-section">
+            <h2 class="section-title">Three AI Agents Working For You</h2>
 
-            <div class="form-grid">
-                <div class="form-group">
-                    <label for="website">Company Website</label>
-                    <input type="url" id="website" value="https://multimarketing.ae" placeholder="https://example.com">
-                </div>
-                <div class="form-group">
-                    <label for="region">Search Region</label>
-                    <input type="text" id="region" placeholder="Plano, TX">
-                </div>
-                <div class="form-group">
-                    <label for="keywords">Search Keywords</label>
-                    <input type="text" id="keywords" placeholder="nail salons">
-                </div>
-                <div class="form-group">
-                    <label for="leadsCount">Number of Leads</label>
-                    <input type="number" id="leadsCount" value="500" min="10" max="3000">
-                </div>
-                <div class="form-group">
-                    <label for="areaCode">Area Code Filter</label>
-                    <input type="text" id="areaCode" value="972" placeholder="972">
-                </div>
-            </div>
+            <div class="robots-grid">
+                <!-- Robot 1 - Analyzer (Humanoid) -->
+                <div class="robot-card" data-aos="fade-up">
+                    <div class="robot-glow"></div>
+                    <div class="robot-image">
+                        <svg class="robot-svg" viewBox="0 0 200 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Glow effect behind robot -->
+                            <ellipse cx="100" cy="200" rx="50" ry="10" fill="url(#glowGrad1)" opacity="0.5"/>
 
-            <div class="btn-group">
-                <button id="startCampaign" class="btn btn-primary">
-                    Start Campaign
-                </button>
-                <button id="stopCampaign" class="btn btn-danger" style="display: none;">
-                    Stop
-                </button>
-            </div>
+                            <!-- Body/Torso -->
+                            <path d="M70 95 L65 140 L75 145 L100 150 L125 145 L135 140 L130 95 Z" fill="url(#bodyGrad1)" stroke="#00f0ff" stroke-width="1.5"/>
+                            <!-- Chest core -->
+                            <circle cx="100" cy="115" r="12" fill="#0a0a0f" stroke="#00f0ff" stroke-width="1"/>
+                            <circle cx="100" cy="115" r="6" fill="#00f0ff" class="core-pulse"/>
+                            <!-- Chest lines -->
+                            <path d="M80 100 L85 130" stroke="#00f0ff" stroke-width="1" opacity="0.5"/>
+                            <path d="M120 100 L115 130" stroke="#00f0ff" stroke-width="1" opacity="0.5"/>
 
-            <!-- Progress -->
-            <div id="progressContainer" class="progress-container" style="display: none;">
-                <div class="progress-bar">
-                    <div id="progressFill" class="progress-fill" style="width: 0%"></div>
+                            <!-- Head -->
+                            <path d="M75 45 L75 85 Q75 95 85 95 L115 95 Q125 95 125 85 L125 45 Q125 30 100 30 Q75 30 75 45 Z" fill="url(#headGrad1)" stroke="#00f0ff" stroke-width="2"/>
+                            <!-- Face plate -->
+                            <rect x="82" y="50" width="36" height="35" rx="5" fill="#0a0a0f" opacity="0.8"/>
+                            <!-- Eyes -->
+                            <rect x="85" y="55" width="12" height="8" rx="2" fill="#00f0ff" class="eye-glow"/>
+                            <rect x="103" y="55" width="12" height="8" rx="2" fill="#00f0ff" class="eye-glow"/>
+                            <!-- Mouth/Speaker -->
+                            <rect x="90" y="72" width="20" height="6" rx="2" fill="#0a0a0f" stroke="#00f0ff" stroke-width="1"/>
+                            <line x1="93" y1="75" x2="97" y2="75" stroke="#00f0ff" stroke-width="1"/>
+                            <line x1="100" y1="75" x2="107" y2="75" stroke="#00f0ff" stroke-width="1"/>
+
+                            <!-- Antenna -->
+                            <line x1="100" y1="30" x2="100" y2="15" stroke="#00f0ff" stroke-width="2"/>
+                            <circle cx="100" cy="12" r="4" fill="#00f0ff" class="antenna-pulse"/>
+                            <!-- Side head details -->
+                            <rect x="70" y="55" width="5" height="20" rx="2" fill="#1a1a2e" stroke="#00f0ff" stroke-width="1"/>
+                            <rect x="125" y="55" width="5" height="20" rx="2" fill="#1a1a2e" stroke="#00f0ff" stroke-width="1"/>
+
+                            <!-- Arms -->
+                            <!-- Left arm -->
+                            <path d="M65 98 L50 110 L45 135 L50 140 L55 138 L58 115 L68 105" fill="url(#armGrad1)" stroke="#00f0ff" stroke-width="1.5"/>
+                            <!-- Left hand holding tablet -->
+                            <rect x="30" y="130" width="25" height="35" rx="3" fill="#1a1a2e" stroke="#00f0ff" stroke-width="1.5"/>
+                            <rect x="34" y="134" width="17" height="24" fill="#0a0a0f"/>
+                            <!-- Screen content - analyzing -->
+                            <line x1="36" y1="140" x2="48" y2="140" stroke="#00f0ff" stroke-width="1" class="scan-line"/>
+                            <line x1="36" y1="145" x2="45" y2="145" stroke="#00f0ff" stroke-width="1" opacity="0.7"/>
+                            <line x1="36" y1="150" x2="48" y2="150" stroke="#00f0ff" stroke-width="1" opacity="0.5"/>
+
+                            <!-- Right arm -->
+                            <path d="M135 98 L150 110 L155 135 L150 140 L145 138 L142 115 L132 105" fill="url(#armGrad1)" stroke="#00f0ff" stroke-width="1.5"/>
+                            <!-- Right hand with hologram -->
+                            <circle cx="158" cy="125" r="15" fill="none" stroke="#00f0ff" stroke-width="1" opacity="0.3" class="hologram-ring"/>
+                            <circle cx="158" cy="125" r="10" fill="none" stroke="#00f0ff" stroke-width="1" opacity="0.5" class="hologram-ring"/>
+                            <circle cx="158" cy="125" r="5" fill="#00f0ff" opacity="0.5"/>
+
+                            <!-- Scanning beam from eyes -->
+                            <path d="M100 63 L70 140 L130 140 Z" fill="url(#scanBeam1)" opacity="0.15" class="scan-beam"/>
+
+                            <!-- Legs hint -->
+                            <path d="M85 150 L82 175 L88 175 L92 155" fill="url(#bodyGrad1)" stroke="#00f0ff" stroke-width="1"/>
+                            <path d="M115 150 L118 175 L112 175 L108 155" fill="url(#bodyGrad1)" stroke="#00f0ff" stroke-width="1"/>
+
+                            <defs>
+                                <linearGradient id="headGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#1e3a4f"/>
+                                    <stop offset="100%" style="stop-color:#0f1a24"/>
+                                </linearGradient>
+                                <linearGradient id="bodyGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#1a2a3a"/>
+                                    <stop offset="100%" style="stop-color:#0a1520"/>
+                                </linearGradient>
+                                <linearGradient id="armGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#15252f"/>
+                                    <stop offset="100%" style="stop-color:#0a1218"/>
+                                </linearGradient>
+                                <linearGradient id="scanBeam1" x1="50%" y1="0%" x2="50%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#00f0ff"/>
+                                    <stop offset="100%" style="stop-color:transparent"/>
+                                </linearGradient>
+                                <radialGradient id="glowGrad1" cx="50%" cy="50%" r="50%">
+                                    <stop offset="0%" style="stop-color:#00f0ff"/>
+                                    <stop offset="100%" style="stop-color:transparent"/>
+                                </radialGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="robot-info">
+                        <span class="robot-number">01</span>
+                        <h3 class="robot-title">Analyzer Bot</h3>
+                        <p class="robot-desc">Studies your company, understands your product, and learns exactly what makes your ideal customer.</p>
+                    </div>
                 </div>
-                <div class="progress-text">
-                    <span id="progressMessage">Initializing...</span>
-                    <span id="progressPercent">0%</span>
+
+                <!-- Robot 2 - Hunter (Humanoid) -->
+                <div class="robot-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="robot-glow"></div>
+                    <div class="robot-image">
+                        <svg class="robot-svg" viewBox="0 0 200 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Glow effect -->
+                            <ellipse cx="100" cy="200" rx="50" ry="10" fill="url(#glowGrad2)" opacity="0.5"/>
+
+                            <!-- Body/Torso - more armored look -->
+                            <path d="M68 95 L60 145 L80 155 L100 158 L120 155 L140 145 L132 95 Z" fill="url(#bodyGrad2)" stroke="#7b2fff" stroke-width="1.5"/>
+                            <!-- Chest reactor -->
+                            <polygon points="100,105 88,118 88,132 100,140 112,132 112,118" fill="#0a0a0f" stroke="#7b2fff" stroke-width="1"/>
+                            <polygon points="100,110 93,118 93,128 100,133 107,128 107,118" fill="#7b2fff" opacity="0.6" class="core-pulse"/>
+                            <!-- Armor lines -->
+                            <path d="M75 100 L70 140" stroke="#7b2fff" stroke-width="1" opacity="0.4"/>
+                            <path d="M125 100 L130 140" stroke="#7b2fff" stroke-width="1" opacity="0.4"/>
+
+                            <!-- Head - visor style -->
+                            <path d="M72 42 L72 82 Q72 92 85 92 L115 92 Q128 92 128 82 L128 42 Q128 25 100 25 Q72 25 72 42 Z" fill="url(#headGrad2)" stroke="#7b2fff" stroke-width="2"/>
+                            <!-- Visor -->
+                            <path d="M78 50 L78 75 Q78 82 88 82 L112 82 Q122 82 122 75 L122 50 Q122 45 100 45 Q78 45 78 50 Z" fill="#0a0a0f" stroke="#7b2fff" stroke-width="1"/>
+                            <!-- Radar eye -->
+                            <circle cx="100" cy="65" r="15" fill="#0a0a0f" stroke="#7b2fff" stroke-width="1"/>
+                            <circle cx="100" cy="65" r="10" stroke="#7b2fff" stroke-width="1" opacity="0.5"/>
+                            <circle cx="100" cy="65" r="5" stroke="#7b2fff" stroke-width="1" opacity="0.3"/>
+                            <line x1="100" y1="65" x2="112" y2="58" stroke="#7b2fff" stroke-width="2" class="radar-line"/>
+                            <circle cx="100" cy="65" r="2" fill="#7b2fff"/>
+
+                            <!-- Multiple antennas -->
+                            <line x1="85" y1="25" x2="78" y2="10" stroke="#7b2fff" stroke-width="2"/>
+                            <line x1="100" y1="25" x2="100" y2="8" stroke="#7b2fff" stroke-width="2"/>
+                            <line x1="115" y1="25" x2="122" y2="10" stroke="#7b2fff" stroke-width="2"/>
+                            <circle cx="78" cy="8" r="3" fill="#7b2fff" class="antenna-pulse"/>
+                            <circle cx="100" cy="6" r="3" fill="#7b2fff" class="antenna-pulse"/>
+                            <circle cx="122" cy="8" r="3" fill="#7b2fff" class="antenna-pulse"/>
+
+                            <!-- Left arm - reaching out -->
+                            <path d="M62 98 L42 115 L25 130 L28 138 L35 135 L48 122 L62 108" fill="url(#armGrad2)" stroke="#7b2fff" stroke-width="1.5"/>
+                            <!-- Left hand with search waves -->
+                            <circle cx="25" cy="130" r="8" fill="#1a1a2e" stroke="#7b2fff" stroke-width="1.5"/>
+                            <path d="M15 120 Q5 130 15 140" stroke="#7b2fff" stroke-width="2" fill="none" class="wave" opacity="0.8"/>
+                            <path d="M10 115 Q-5 130 10 145" stroke="#7b2fff" stroke-width="2" fill="none" class="wave" opacity="0.5"/>
+                            <path d="M5 110 Q-15 130 5 150" stroke="#7b2fff" stroke-width="2" fill="none" class="wave" opacity="0.3"/>
+
+                            <!-- Right arm -->
+                            <path d="M138 98 L158 115 L175 130 L172 138 L165 135 L152 122 L138 108" fill="url(#armGrad2)" stroke="#7b2fff" stroke-width="1.5"/>
+                            <!-- Right hand with captured leads -->
+                            <circle cx="175" cy="130" r="8" fill="#1a1a2e" stroke="#7b2fff" stroke-width="1.5"/>
+                            <!-- Floating leads -->
+                            <circle cx="180" cy="110" r="6" fill="#1a1a2e" stroke="#7b2fff" stroke-width="1" class="lead-float"/>
+                            <text x="180" y="113" text-anchor="middle" fill="#7b2fff" font-size="8" font-weight="bold">L</text>
+                            <circle cx="190" cy="125" r="6" fill="#1a1a2e" stroke="#7b2fff" stroke-width="1" class="lead-float" style="animation-delay: 0.3s"/>
+                            <text x="190" y="128" text-anchor="middle" fill="#7b2fff" font-size="8" font-weight="bold">L</text>
+                            <circle cx="185" cy="145" r="6" fill="#1a1a2e" stroke="#7b2fff" stroke-width="1" class="lead-float" style="animation-delay: 0.6s"/>
+                            <text x="185" y="148" text-anchor="middle" fill="#7b2fff" font-size="8" font-weight="bold">L</text>
+
+                            <!-- Legs -->
+                            <path d="M82 155 L78 180 L85 180 L92 160" fill="url(#bodyGrad2)" stroke="#7b2fff" stroke-width="1"/>
+                            <path d="M118 155 L122 180 L115 180 L108 160" fill="url(#bodyGrad2)" stroke="#7b2fff" stroke-width="1"/>
+
+                            <defs>
+                                <linearGradient id="headGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#2a1f4f"/>
+                                    <stop offset="100%" style="stop-color:#150f2a"/>
+                                </linearGradient>
+                                <linearGradient id="bodyGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#251a45"/>
+                                    <stop offset="100%" style="stop-color:#100a20"/>
+                                </linearGradient>
+                                <linearGradient id="armGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#1f1538"/>
+                                    <stop offset="100%" style="stop-color:#0d0818"/>
+                                </linearGradient>
+                                <radialGradient id="glowGrad2" cx="50%" cy="50%" r="50%">
+                                    <stop offset="0%" style="stop-color:#7b2fff"/>
+                                    <stop offset="100%" style="stop-color:transparent"/>
+                                </radialGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="robot-info">
+                        <span class="robot-number">02</span>
+                        <h3 class="robot-title">Hunter Bot</h3>
+                        <p class="robot-desc">Scours the internet to find leads matching your criteria — industry, location, company size. Thousands of prospects discovered.</p>
+                    </div>
+                </div>
+
+                <!-- Robot 3 - Caller (Humanoid) -->
+                <div class="robot-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="robot-glow"></div>
+                    <div class="robot-image">
+                        <svg class="robot-svg" viewBox="0 0 200 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Glow effect -->
+                            <ellipse cx="100" cy="200" rx="50" ry="10" fill="url(#glowGrad3)" opacity="0.5"/>
+
+                            <!-- Body/Torso - sleek design -->
+                            <path d="M70 95 L62 145 L78 152 L100 155 L122 152 L138 145 L130 95 Z" fill="url(#bodyGrad3)" stroke="#ff00e5" stroke-width="1.5"/>
+                            <!-- Chest speaker grills -->
+                            <ellipse cx="100" cy="115" rx="18" ry="12" fill="#0a0a0f" stroke="#ff00e5" stroke-width="1"/>
+                            <line x1="85" y1="112" x2="85" y2="118" stroke="#ff00e5" stroke-width="2"/>
+                            <line x1="92" y1="110" x2="92" y2="120" stroke="#ff00e5" stroke-width="2"/>
+                            <line x1="100" y1="108" x2="100" y2="122" stroke="#ff00e5" stroke-width="3" class="sound-bar"/>
+                            <line x1="108" y1="110" x2="108" y2="120" stroke="#ff00e5" stroke-width="2"/>
+                            <line x1="115" y1="112" x2="115" y2="118" stroke="#ff00e5" stroke-width="2"/>
+
+                            <!-- Head - friendly communicator -->
+                            <path d="M73 45 L73 82 Q73 92 87 92 L113 92 Q127 92 127 82 L127 45 Q127 28 100 28 Q73 28 73 45 Z" fill="url(#headGrad3)" stroke="#ff00e5" stroke-width="2"/>
+                            <!-- Face -->
+                            <ellipse cx="100" cy="65" rx="22" ry="20" fill="#0a0a0f" opacity="0.7"/>
+                            <!-- Eyes - friendly -->
+                            <ellipse cx="90" cy="58" rx="6" ry="5" fill="#ff00e5" class="eye-glow"/>
+                            <ellipse cx="110" cy="58" rx="6" ry="5" fill="#ff00e5" class="eye-glow"/>
+                            <!-- Smile/speaker mouth -->
+                            <path d="M88 72 Q100 82 112 72" stroke="#ff00e5" stroke-width="2" fill="none"/>
+
+                            <!-- Headset -->
+                            <path d="M73 55 Q65 55 65 65 Q65 75 73 75" stroke="#ff00e5" stroke-width="3" fill="none"/>
+                            <circle cx="63" cy="65" r="6" fill="#1a1a2e" stroke="#ff00e5" stroke-width="2"/>
+                            <!-- Mic -->
+                            <line x1="63" y1="71" x2="63" y2="82" stroke="#ff00e5" stroke-width="2"/>
+                            <ellipse cx="63" cy="85" rx="5" ry="3" fill="#1a1a2e" stroke="#ff00e5" stroke-width="1"/>
+
+                            <!-- Antenna -->
+                            <line x1="100" y1="28" x2="100" y2="12" stroke="#ff00e5" stroke-width="2"/>
+                            <circle cx="100" cy="10" r="4" fill="#ff00e5" class="antenna-pulse"/>
+
+                            <!-- Sound waves from head -->
+                            <path d="M130 55 Q140 65 130 75" stroke="#ff00e5" stroke-width="2" fill="none" class="sound-wave"/>
+                            <path d="M135 50 Q150 65 135 80" stroke="#ff00e5" stroke-width="2" fill="none" class="sound-wave" opacity="0.6"/>
+                            <path d="M140 45 Q160 65 140 85" stroke="#ff00e5" stroke-width="2" fill="none" class="sound-wave" opacity="0.3"/>
+
+                            <!-- Left arm - gesturing -->
+                            <path d="M65 98 L50 115 L40 140 L45 145 L52 142 L58 120 L68 105" fill="url(#armGrad3)" stroke="#ff00e5" stroke-width="1.5"/>
+                            <!-- Left hand open -->
+                            <circle cx="42" cy="145" r="7" fill="#1a1a2e" stroke="#ff00e5" stroke-width="1.5"/>
+
+                            <!-- Right arm - holding checklist -->
+                            <path d="M135 98 L150 108 L158 125 L155 130 L148 128 L142 112 L132 102" fill="url(#armGrad3)" stroke="#ff00e5" stroke-width="1.5"/>
+                            <!-- Clipboard/Checklist -->
+                            <rect x="150" y="125" width="35" height="50" rx="4" fill="#1a1a2e" stroke="#ff00e5" stroke-width="1.5"/>
+                            <rect x="154" y="130" width="27" height="40" fill="#0a0a0f"/>
+                            <!-- Checklist items -->
+                            <circle cx="160" cy="140" r="3" fill="#00ff88"/>
+                            <line x1="166" y1="140" x2="178" y2="140" stroke="#fff" stroke-width="2"/>
+                            <circle cx="160" cy="152" r="3" fill="#00ff88"/>
+                            <line x1="166" y1="152" x2="176" y2="152" stroke="#fff" stroke-width="2"/>
+                            <circle cx="160" cy="164" r="3" fill="#00ff88"/>
+                            <line x1="166" y1="164" x2="175" y2="164" stroke="#fff" stroke-width="2"/>
+
+                            <!-- Legs -->
+                            <path d="M83 152 L80 178 L87 178 L92 157" fill="url(#bodyGrad3)" stroke="#ff00e5" stroke-width="1"/>
+                            <path d="M117 152 L120 178 L113 178 L108 157" fill="url(#bodyGrad3)" stroke="#ff00e5" stroke-width="1"/>
+
+                            <defs>
+                                <linearGradient id="headGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#3a1a3f"/>
+                                    <stop offset="100%" style="stop-color:#1a0a1f"/>
+                                </linearGradient>
+                                <linearGradient id="bodyGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#351535"/>
+                                    <stop offset="100%" style="stop-color:#150815"/>
+                                </linearGradient>
+                                <linearGradient id="armGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#2a1028"/>
+                                    <stop offset="100%" style="stop-color:#120610"/>
+                                </linearGradient>
+                                <radialGradient id="glowGrad3" cx="50%" cy="50%" r="50%">
+                                    <stop offset="0%" style="stop-color:#ff00e5"/>
+                                    <stop offset="100%" style="stop-color:transparent"/>
+                                </radialGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="robot-info">
+                        <span class="robot-number">03</span>
+                        <h3 class="robot-title">Caller Bot</h3>
+                        <p class="robot-desc">Makes intelligent calls to every lead, qualifies interest, and delivers a detailed report with hot prospects ready to buy.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Stats Section -->
-        <section class="section">
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div id="statsLeadsTotal" class="stat-value">0</div>
-                    <div class="stat-label">Total Leads</div>
+        <!-- Benefits -->
+        <section class="benefits-section">
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <svg viewBox="0 0 50 50" fill="none"><path d="M25 5 L45 15 L45 35 L25 45 L5 35 L5 15 Z" stroke="url(#benefitGrad)" stroke-width="2" fill="none"/><text x="25" y="30" text-anchor="middle" fill="#00f0ff" font-size="16" font-weight="bold">$</text><defs><linearGradient id="benefitGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#00f0ff"/><stop offset="100%" style="stop-color:#7b2fff"/></linearGradient></defs></svg>
                 </div>
-                <div class="stat-card">
-                    <div id="statsLeadsReady" class="stat-value">0</div>
-                    <div class="stat-label">Ready to Call</div>
+                <h3>Save 90% on Outreach</h3>
+                <p>No more hiring SDR teams or paying per lead. AI works 24/7 at a fraction of the cost.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <svg viewBox="0 0 50 50" fill="none"><circle cx="25" cy="25" r="20" stroke="url(#benefitGrad2)" stroke-width="2" fill="none"/><path d="M25 10 L25 25 L35 30" stroke="#7b2fff" stroke-width="3" stroke-linecap="round"/><defs><linearGradient id="benefitGrad2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#7b2fff"/><stop offset="100%" style="stop-color:#ff00e5"/></linearGradient></defs></svg>
                 </div>
-                <div class="stat-card">
-                    <div id="statsCallsTotal" class="stat-value">0</div>
-                    <div class="stat-label">Total Calls</div>
+                <h3>Hours, Not Weeks</h3>
+                <p>Get thousands of qualified calls completed while you focus on closing deals.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <svg viewBox="0 0 50 50" fill="none"><rect x="8" y="15" width="34" height="25" rx="3" stroke="url(#benefitGrad3)" stroke-width="2" fill="none"/><path d="M15 25 L22 32 L35 19" stroke="#00ff88" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="benefitGrad3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ff00e5"/><stop offset="100%" style="stop-color:#00f0ff"/></linearGradient></defs></svg>
                 </div>
-                <div class="stat-card">
-                    <div id="statsCallsInterested" class="stat-value">0</div>
-                    <div class="stat-label">Interested</div>
-                </div>
+                <h3>Full Analytics</h3>
+                <p>Detailed call reports, interest scores, and a checklist of your hottest leads.</p>
             </div>
         </section>
 
-        <!-- Leads Table Section -->
-        <section class="section">
-            <div class="section-header">
-                <div>
-                    <h2 class="section-title">Leads</h2>
-                    <p class="section-subtitle" id="leadsReadyCount">Ready: 0</p>
+        <!-- CTA Form Section -->
+        <section class="form-section" id="get-started">
+            <div class="form-container">
+                <div class="form-header">
+                    <h2>Launch Your AI Lead Campaign</h2>
+                    <p>Fill in the details and our bots will start working for you</p>
                 </div>
-            </div>
 
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Company</th>
-                            <th>Phone</th>
-                            <th>Rating</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody id="leadsTable">
-                        <tr>
-                            <td colspan="5" class="empty-state">
-                                <div class="empty-state-icon">📋</div>
-                                <div>No leads yet. Start a campaign to find leads.</div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
+                <form id="leadForm" class="lead-form">
+                    <div class="form-group">
+                        <label for="website">Your Company Website</label>
+                        <input type="url" id="website" name="website" placeholder="https://yourcompany.com" required>
+                        <span class="input-hint">We'll analyze your business to understand your product</span>
+                    </div>
 
-        <!-- Call Control Section -->
-        <section class="section">
-            <div class="section-header">
-                <div>
-                    <h2 class="section-title">Call Control</h2>
-                    <p class="section-subtitle" id="callsProgress">Ready to start calling</p>
-                </div>
-                <div class="btn-group">
-                    <button id="startCalls" class="btn btn-primary">
-                        Start Calls
+                    <div class="form-group">
+                        <label for="industry">Target Industry / Niche</label>
+                        <input type="text" id="industry" name="industry" placeholder="e.g., SaaS, Real Estate, E-commerce..." required>
+                        <span class="input-hint">What type of clients are you looking for?</span>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="country">Country</label>
+                            <input type="text" id="country" name="country" placeholder="e.g., USA, Germany..." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="region">Region / City</label>
+                            <input type="text" id="region" name="region" placeholder="e.g., California, Berlin...">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="calls">Number of Calls</label>
+                        <div class="range-container">
+                            <input type="range" id="calls" name="calls" min="300" max="3000" step="100" value="1000">
+                            <div class="range-labels">
+                                <span>300</span>
+                                <span class="range-value" id="callsValue">1000</span>
+                                <span>3000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <span class="btn-text">Start My Campaign</span>
+                        <span class="btn-icon">
+                            <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </span>
                     </button>
-                    <button id="stopCalls" class="btn btn-danger" style="display: none;">
-                        Stop
-                    </button>
-                </div>
+                </form>
             </div>
         </section>
 
-        <!-- Call Results Section -->
-        <section class="section">
-            <div class="section-header">
-                <div>
-                    <h2 class="section-title">Call Results</h2>
-                    <p class="section-subtitle">Results from completed calls</p>
-                </div>
-            </div>
-
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Company</th>
-                            <th>Phone</th>
-                            <th>Interest</th>
-                            <th>Follow-up</th>
-                            <th>Notes</th>
-                            <th>Date</th>
-                        </tr>
-                    </thead>
-                    <tbody id="callsTable">
-                        <tr>
-                            <td colspan="6" class="empty-state">
-                                <div class="empty-state-icon">📞</div>
-                                <div>No calls yet. Start calling to see results.</div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <h2>Have Questions?</h2>
+            <p>Get in touch directly — we're here to help</p>
+            <div class="contact-buttons">
+                <a href="https://wa.me/971504065386" target="_blank" class="contact-btn whatsapp">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    <span>WhatsApp</span>
+                </a>
+                <a href="mailto:obsofficer@gmail.com" class="contact-btn email">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>
+                    <span>Email Us</span>
+                </a>
             </div>
         </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-logo">BETALEADS</div>
+            <p>AI-Powered Lead Generation & Qualification</p>
+            <div class="footer-line"></div>
+            <p class="copyright">&copy; 2025 Betaleads. All rights reserved.</p>
+        </footer>
+    </main>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <svg viewBox="0 0 60 60" fill="none">
+                    <circle cx="30" cy="30" r="28" stroke="#00ff88" stroke-width="2"/>
+                    <path d="M18 30 L26 38 L42 22" stroke="#00ff88" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <h3>Request Sent!</h3>
+            <p>We'll analyze your requirements and get back to you within 24 hours.</p>
+            <button class="modal-close" onclick="closeModal()">Got it</button>
+        </div>
     </div>
 
-    <script src="/app.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
